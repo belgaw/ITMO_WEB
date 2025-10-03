@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интернет-магазин</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>My Shop</h1>
+        <div class="cart-info">
+            <button id="view-cart-btn">Корзина (<span id="cart-count">0</span>) | Итого: <span id="cart-total">0</span> руб.</button>
+        </div>
+    </header>
+
+    <main>
+        <h2 class="catalog-title">Каталог товаров</h2> 
+        
+        <section class="products">
+            
+            <article class="product-card" data-id="1" data-price="120000">
+                <img src="images/notebook.jpg" alt="Ноутбук X1">
+                <h3>Ноутбук</h3>
+                <p class="price">120000 руб.</p>
+                <button class="add-to-cart-btn">Добавить в корзину</button>
+            </article>
+
+            <article class="product-card" data-id="2" data-price="5000">
+                <img src="images/mouse.jpg" alt="Игровая Мышь">
+                <h3>Игровая Мышь</h3>
+                <p class="price">5000 руб.</p>
+                <button class="add-to-cart-btn">Добавить в корзину</button>
+            </article>
+
+            <article class="product-card" data-id="3" data-price="6000">
+                <img src="images/keyboard.jpg" alt="Клавиатура">
+                <h3>Клавиатура</h3>
+                <p class="price">6000 руб.</p>
+                <button class="add-to-cart-btn">Добавить в корзину</button>
+            </article>
+
+            <article class="product-card" data-id="4" data-price="60000">
+                <img src="images/videocard.jpg" alt="Видеокарта">
+                <h3>Видеокарта</h3>
+                <p class="price">60000 руб.</p>
+                <button class="add-to-cart-btn">Добавить в корзину</button>
+            </article>
+            
+            </section>
+
+        <section id="cart-modal" class="modal" style="display:none;">
+            <div class="modal-content">
+                <h3>Ваша Корзина</h3>
+                <ul id="cart-items">
+                    </ul>
+
+                <p>Общая сумма: <strong id="modal-cart-total">0</strong> руб.</p>
+                <button id="checkout-btn">Оформить заказ</button>
+                <button id="close-cart-btn">Закрыть</button>
+
+                <form id="order-form" style="display: none;">
+                    <h4>Оформление заказа</h4>
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" required>
+
+                    <label for="surname">Фамилия:</label>
+                    <input type="text" id="surname" required>
+
+                    <label for="address">Адрес доставки:</label>
+                    <input type="text" id="address" required>
+
+                    <label for="phone">Телефон:</label>
+                    <input type="tel" id="phone" required>
+
+                    <button type="submit">Создать заказ</button>
+                </form>
+
+                <p id="order-message" style="display: none; color: green; font-weight: bold;">Заказ создан!</p>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Интернет-магазин</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
