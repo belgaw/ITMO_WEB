@@ -1,4 +1,3 @@
-
 :root {
     --primary-color: #007bff;
     --accent-color: #28a745;
@@ -288,4 +287,5 @@ footer {
     text-align: center;
     padding: 20px;
     font-size: 1.3rem;
+
 }
